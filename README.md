@@ -1,10 +1,11 @@
 # WAI-Stable-Diffusion
 Stable Diffusion Service Launch
 
-# 업로드 현황
+# 업데이트 현황
 23.02.07 - modules 폴더에 업로드(ImageExtend.py, ImageToImage.py, TextToImage.py, translated_model.ipynb)
-23.02.11 - py 파일 3개 통합
+23.02.11 - ImageExtend.py, ImageToImage.py, TextToImage.py -> Stable_diffusion_total.py로 통합
+23.02.17 - 번역모델 3종(10글자 미만, 10~50글자, 50글자 이상) 성능 결과 확인 후 google_translate_api 모델 선정
 
-# 진행 현황
-- 번역모델은 지난번 회의 때 이야기한 Case별(짧은문장, 긴문장, 슬랭포함) 번역 퀄리티 확인/검수 후 업로드 예정
-- 파인튜닝은 마무리 되는 대로 업로드 예정
+# 진행 중
+- Stable_diffusion_total.py에 google_translate_api 모델 적용 진행
+- Fine tuning 초안 버전 완료 및 테스트 진행
