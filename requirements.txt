@@ -7,3 +7,4 @@ accelerate==0.12.0
 scipy==1.10.0
 xformers==0.0.13
 git+https://github.com/huggingface/diffusers.git#egg=diffusers
+deep-translator
