@@ -18,7 +18,7 @@ def with_magic_keyword(magic_keyword_data:json, magic_keys=magic_keys):
     return new_data
  
 def main(korean_input:str)->str:
-    return make_translate(korean_input) + with_magic_keyword(magic_keyword_data)
+    return make_translate(korean_input) + "," + with_magic_keyword(magic_keyword_data)
     
 
  
