@@ -6,5 +6,6 @@ Pillow==7.1.2
 accelerate==0.12.0
 scipy==1.10.0
 xformers==0.0.13
+wget==3.2
+deep-translator==1.10.1
 git+https://github.com/huggingface/diffusers.git#egg=diffusers
-deep-translator
