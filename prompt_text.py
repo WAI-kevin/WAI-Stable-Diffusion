@@ -1,5 +1,6 @@
 import json  
 from deep_translator import GoogleTranslator  
+import re
 import nltk
 from nltk.corpus import stopwords 
 from nltk.tokenize import word_tokenize   
@@ -37,10 +38,19 @@ def with_magic_keyword(magic_keyword_data:json, magic_keys=magic_keys)->str:
     return new_data
  
 def main(korean_input:str)->str:
+    korean_input = accept_only_korean(korean_input)  
     return make_translate(korean_input) +" , "+ with_magic_keyword(magic_keyword_data)
     
- 
+def accept_only_korean(korean_input:str) ->str:
+    only_korean = ''
+    pattern = re.compile(r'[ㄱ-ㅣ가-힣]')       
+    find_koreans = pattern.findall(korean_input) 
+    if len(find_koreans) > 0:
+        only_korean += "".join(find_koreans)
+    return only_korean 
+
+
 if __name__ == "__main__":
-    example_input = '버거킹에서 햄버거와 콜라를 먹는여자'
+    example_input = '버거킹에서 햄버거와 콜라를 먹는여자sdfdsfdsfdsfdsfdsfefs$$$####'
     print(main(example_input))
 
